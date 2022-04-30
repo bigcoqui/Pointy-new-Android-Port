@@ -284,6 +284,11 @@ class MainMenuState extends MusicBeatState
 			add(wFade);
 			FlxTween.tween(wFade, {alpha : 0}, 0.5);
 		}
+		
+		#if android
+		addVirtualPad(UP_DOWN, A_B);
+		#end
+		
 		super.create();
 	}
 
