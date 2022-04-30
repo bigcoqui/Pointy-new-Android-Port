@@ -88,6 +88,11 @@ class ExtrasMenu extends MusicBeatState
             overed = false;
             FlxG.sound.play(Paths.sound('instGameOver'));
         }
+        
+		#if android
+		addVirtualPad(UP_DOWN, A_B);
+		#end
+		
 		super.create();
 	}
 	override function update(elapsed:Float)
